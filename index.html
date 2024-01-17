@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/1ae9c45ba4.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <div class="logo">δan</div>
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <!-- <li><a href="#services">Services</a></li> -->
+                <li><a href="#portfolio">Portfolio</a></li>
+                <!-- <li><a href="#contact">Contact</a></li> -->
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Diamond 3 Overwatch Player</p>
+            <h1><span>Hi, I'm <span class="name">Daniel</span><br>Viray from Houston</span></h1>
+        </div>
+    </div>
+</div>
+<!--About Me section---------------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/headshot.jpeg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus beatae fugiat officia iusto cupiditate animi ipsum aut voluptatem, nihil rerum consequatur cumque quia nobis explicabo vero tenetur ex dolorum architecto sint magnam id corrupti nulla exercitationem. Officia iste fugit id quas consectetur perferendis odio qui molestiae ipsum, sint, eligendi dolorem.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                        <li><span>Web Development</span><br>Web app development</li>
+                        <li><span>App Development</span><br>Building Android/iOS apps</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2007-Present</span><br>Full Time Student</li>
+                        <li><span>2021</span><br>Calc 2 Survivor</li>
+                        <li><span>2020-2021</span><br>Professional Among Us Impostor</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2027-2029</span><br>University of Texas, Ph.D Computational and Applied Mathematics</li>
+                        <li><span>2025-2027</span><br>University of Houston, M.S. Applied Mathematics</li>
+                        <li><span>2023-2025</span><br>University of Houston, B.S Mathematics</li>
+                        <li><span>2021-2025</span><br>University of Houston, B.S Computer Science</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- --------------services--------------- -->
+
+
+<!-- --------------portfolio-------------- -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.jpg">
+                <div class="layer">
+                    <h3>COVID-19</h3>
+                    <p>I made it and am the source of the 2019 Coronavirus epidemic.</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-2.jpeg">
+                <div class="layer">
+                    <h3>Walls of Attack on Titan</h3>
+                    <p>I made this to protect the titans from Levi Ackerman (Sasagayoh!!!)</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-3.png">
+                <div class="layer">
+                    <h3>GOOGLE</h3>
+                    <p>Hello my name is Steve Jobs I made google please hire me</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+        for(tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+</body>
+</html>
